@@ -4,12 +4,21 @@ function stampaTabellina(input) {
         input.question("Inserisci un numero: ", (input) => {
             const numero = parseInt(input);
 			
-			console.log(`Tabellina del ${input}:`);
-			for (let i = 1; i <= 10; i++) {
+			if (isNaN(numero)) {
+                console.log("Inserisci un numero valido!");
+                chiediNumero();
+          
+            } else {
+                console.log(`Tabellina del ${input}:`);
+				for (let i = 1; i <= 10; i++) {
 				console.log(`${input} x ${i} = ${input * i}`);
 				}
-            
+			
+            }
+            	
         });
+		
+	
     }
 	 
 	
