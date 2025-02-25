@@ -1,43 +1,45 @@
 import * as readline from 'readline';
-//var datoinput: string;
-var i:number = 0;
 
-///////////////////////////////////////////////
-// LUCA LASCIA STARE ...NON GUARDAREEEE
-//////////////////////////////////////////////
+var i: number=0;
+var operaz: string;
+var numero1:number=0;
+var numero2:number=0;
 
 
-// Crea l'interfaccia readline
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
 function chiediNumero() {
-  if (i <2 ) {
-   
+  
+    if (i < 3){
     rl.question("Per favore, inserisci un numero valido. ", (sceltaUtente) => {
 
       const numero = parseInt(sceltaUtente);
        
         if (isNaN(numero)) {
             console.log("Inserisci un numero valido!");
-            eseguiCalcolatrice();
+             eseguiCalcolatrice();
            } else {
-               
-                i=++i; 
+                const numero = parseInt(sceltaUtente);
+                if (i ===1) { 
+                 numero1=numero; 
+                } 
+                if (i ===2) { 
+                  numero2=numero;
+                } 
+             
                 eseguiCalcolatrice();
 
                   }
              
     });
-  }
-  else {
+    }
+    if (i === 3){
 
-    rl.question("ora iserisci opertore tra + * - : ", (sceltaUtente) => {
-
-                i=++i; 
-                eseguiCalcolatrice();
+    rl.question("ora iserisci opertore tra + * - : ", (operazione) => {
+               eseguiCalcolatrice();
 
              
     });
@@ -48,8 +50,8 @@ function chiediNumero() {
 
 
 // Funzione calcolatrice
-export function calcolatrice(numero1: number, numero2: number, operazione: string): number | string {
-  switch (operazione) {
+export function calcolatrice(): number | string {
+  switch (operaz) {
     case '+':
       return numero1 + numero2;
     case '-':
@@ -67,13 +69,22 @@ export function calcolatrice(numero1: number, numero2: number, operazione: strin
 }
 
 // Funzione principale
-export function eseguiCalcolatrice() {
-    if (i === 3) {
-    //const risultato = calcolatrice(dato1, dato2, operazione);
+export function eseguiCalcolatrice(): void  {
+     
+
+    i=++i; 
+    //console.log(i);
+    if (i === 4) {
+    const risultato = calcolatrice();
+
+    console.log('risultato' + risultato);
+
     rl.close();
     return;
        }
+    
     return chiediNumero();
+    
   
   
  
