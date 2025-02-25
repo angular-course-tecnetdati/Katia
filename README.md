@@ -45,4 +45,14 @@ npm start
 
 ```
 
+# Note sugli esercizi svolti
+
+## Primo giorno
+
+- ***Esercizio Dado***: Ottimo lavoro
+- ***Esercizio Tabellina***: va bene, fai attenzione il nome della variabile della funzione di call-back sovrascrive il nome del readline
+- ***Esercizio hangman***: ottimo lavoro, forse avrei aggiunto qualche funzione per scomporre ulteriormente, come:
+  - verificaLettera(lettera)
+  - checkLettera(lettera)
+  - stampaEsito() 
 
