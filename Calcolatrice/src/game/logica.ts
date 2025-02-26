@@ -25,9 +25,11 @@ function chiediNumero() {
                 const numero = parseInt(sceltaUtente);
                 if (i ===1) { 
                  numero1=numero; 
+               
                 } 
                 if (i ===2) { 
                   numero2=numero;
+                 
                 } 
              
                 eseguiCalcolatrice();
@@ -38,7 +40,8 @@ function chiediNumero() {
     }
     if (i === 3){
 
-    rl.question("ora iserisci opertore tra + * - : ", (operazione) => {
+    rl.question("ora iserisci opertore tra + * - / ", (operazione) => {
+               operaz=operazione;
                eseguiCalcolatrice();
 
              
@@ -50,9 +53,9 @@ function chiediNumero() {
 
 
 // Funzione calcolatrice
-export function calcolatrice(): number | string {
+export function calcolatrice() {
   switch (operaz) {
-    case '+':
+    case '+':  
       return numero1 + numero2;
     case '-':
       return numero1 - numero2;
@@ -77,7 +80,7 @@ export function eseguiCalcolatrice(): void  {
     if (i === 4) {
     const risultato = calcolatrice();
 
-    console.log('risultato' + risultato);
+    console.log('risultato -->' + risultato);
 
     rl.close();
     return;
