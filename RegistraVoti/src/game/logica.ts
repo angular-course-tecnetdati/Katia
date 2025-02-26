@@ -2,7 +2,7 @@ import * as readline from 'readline';
 const scelte: string[] = ["CANTO", "BALLO", "GIARDINAGGIO"];
 const numMaterie:number = scelte.length;
 var i: number=0;
-var Riepilogo: string[]  ;
+var Riepilogo: string[] = [] ;
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -21,7 +21,10 @@ function ChiediVoto() {
            } else {
 
              if (numero >= 1 && numero <= 10) {
-                Riepilogo=['Materia ' + scelte[i] + ' Voto:' + numero ];
+                //Riepilogo=['Materia ' + scelte[i] + ' Voto:' + numero ];
+
+                Riepilogo.push('Materia ' + scelte[i] + ' Voto:' + numero );
+
                 i=++i; 
                 RegistraVoto();
 
@@ -46,7 +49,7 @@ export function RegistraVoto(): void {
                 console.log('------------------');
                 console.log('RIEPILOGO');
                 console.log('------------------');
-                for (let e = 1; e <= numMaterie; e++) {
+                for (let e= 0; e <= Riepilogo.length-1; e++) {
                     console.log(Riepilogo[e]);
                     }
 
