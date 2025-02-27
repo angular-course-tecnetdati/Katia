@@ -55,4 +55,6 @@ npm start
   - verificaLettera(lettera)
   - checkLettera(lettera)
   - stampaEsito() 
+- ***Esercizio calcolatrice***: la cartella(_package_) `game`  potevi chiamarla diversamente non essendo un gioco, per il resto ok.
+- ***tecnetdati sito***: Per iniziare direi che va benissimo con questi tre componenti ;)
 
