@@ -19,9 +19,8 @@ export class TabellinaComponent implements OnInit  {
 
   numeroHover: number | null = null;
 
-  leggiinput(numeroi: number) {
+  leggiinput(numeroinput: number) {
 
 
-    console.log ('arriv '+ numeroi);
-  }
+      }
 }

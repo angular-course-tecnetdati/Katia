@@ -1,7 +1,8 @@
 <ul>
+
   <h1 *ngFor="let numero of numeri">
 
-    <button (click)="onClick( numero )">{{ numero }}
+    <button [ngClass]="{ 'celeste': bottoneCliccato === numero }"  (click)="onClick(numero)" >{{ numero }}
 
   </button>
   </h1>
