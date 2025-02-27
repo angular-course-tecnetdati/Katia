@@ -1,0 +1,10 @@
+<ul>
+  <h1 *ngFor="let numero of numeri">
+
+    <button (click)="onClick( numero )">{{ numero }}
+
+  </button>
+  </h1>
+
+</ul>
+<app-tabellina [numeroinput] = "numeroxcalcolo"></app-tabellina>
