@@ -57,4 +57,7 @@ npm start
   - stampaEsito() 
 - ***Esercizio calcolatrice***: la cartella(_package_) `game`  potevi chiamarla diversamente non essendo un gioco, per il resto ok.
 - ***tecnetdati sito***: Per iniziare direi che va benissimo con questi tre componenti ;)
-
+- ***Angular tabelline***: 
+  - bravissima che hai utilizzato la direttiva `ngClass` ed `ngStyle`
+  - ok utilizzo di `ngFor`
+  - `ngIf` ok, ma potevi sfruttare il [`truthiness`](https://github.com/angular-course-tecnetdati/slide/blob/master/Lezione02_IntroTypescript.pdf) 
