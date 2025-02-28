@@ -61,3 +61,4 @@ npm start
   - bravissima che hai utilizzato la direttiva `ngClass` ed `ngStyle`
   - ok utilizzo di `ngFor`
   - `ngIf` ok, ma potevi sfruttare il [`truthiness`](https://github.com/angular-course-tecnetdati/slide/blob/master/Lezione02_IntroTypescript.pdf) 
+  - ok binding tra componenti
